@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Show Reservation</title>
+    <style>
+		 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins', sans-serif;
+           
+            background: url('https://images.unsplash.com/photo-1464618663641-bbdd760ae84a?auto=format&fit=crop&q=80&w=2940&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat;
+            
+            background-size: cover;
+        }
+	</style>
+</head>
+<body>
+    <h2>Show Reservation</h2>
+    <table>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Class of Travel</th>
+            <th>Date of Departure</th>
+            
+        </tr>
+        <tr th:each="r : ${reservations}">
+            <td th:text="${r.firstName}">First Name</td>
+            <td th:text="${r.lastName}">Last Name</td>
+            <td th:text="${r.ClassofTravel}">Class of Travel</td>
+            <td th:text="${r.dateofDeparture}">Date of Departure</td>
+        </tr>
+    </table>
+    <a href="/">Home</a>
+</body>
+</html>
